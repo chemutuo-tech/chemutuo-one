@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { ProductDetailPage } from "../../../../components/ProductDetailPage";
 import { getProduct } from "../../../../lib/products";
+import { productAvailability, publicRelease } from "../../../../lib/release";
 
 export const metadata: Metadata = {
   title: "Nido",
   description:
-    "Organizá compras, gastos, rutinas y cuidados con las personas de tu hogar. Nido 1.0.0 para Android, próximamente en Google Play.",
+    `Organizá compras, gastos, rutinas y cuidados con las personas de tu hogar. Nido ${publicRelease.versionName} para Android. ${productAvailability.nido}.`,
   alternates: { canonical: "/productos/nido" },
   openGraph: {
     title: "Nido · Tu hogar y tu espacio personal",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Nido · Tu hogar y tu espacio personal",
-    description: "Organización compartida y un lugar para vos. Próximamente en Play Store.",
+    description: `Organización compartida y un lugar para vos. ${productAvailability.nido}.`,
     images: ["/productos/nido/nido-1.0.0.png"]
   }
 };

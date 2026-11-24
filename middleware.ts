@@ -1,8 +1,7 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-const ADMIN_SESSION_COOKIE = "jondrea_admin_session";
-const ADMIN_SESSION_VALUE = "ok";
+import { ADMIN_SESSION_COOKIE, verifyAdminSession } from "./lib/adminSession";
 
 /** Paths públicos del área admin. */
 function isPublicAdminPath(pathname: string) {
@@ -13,7 +12,7 @@ function isPublicAdminPath(pathname: string) {
 }
 
 /** Protege /admin/* con cookie de sesión. */
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
 
   if (isPublicAdminPath(pathname)) {
@@ -21,7 +20,7 @@ export function middleware(request: NextRequest) {
   }
 
   const sessionCookie = request.cookies.get(ADMIN_SESSION_COOKIE)?.value;
-  if (sessionCookie === ADMIN_SESSION_VALUE) {
+  if (await verifyAdminSession(sessionCookie)) {
     return NextResponse.next();
   }
 

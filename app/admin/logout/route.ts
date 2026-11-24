@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 
-const ADMIN_SESSION_COOKIE = "jondrea_admin_session";
+import { ADMIN_SESSION_COOKIE, adminSessionCookieOptions } from "../../../lib/adminSession";
 
 /** Cierra sesión admin y redirige al login. */
 export async function POST(request: Request) {
   const response = NextResponse.redirect(new URL("/admin/login", request.url), 303);
-  response.cookies.delete(ADMIN_SESSION_COOKIE);
+  response.cookies.set(ADMIN_SESSION_COOKIE, "", { ...adminSessionCookieOptions, maxAge: 0 });
   return response;
 }

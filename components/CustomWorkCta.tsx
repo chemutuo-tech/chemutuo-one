@@ -7,7 +7,7 @@ type CustomWorkCtaProps = {
 };
 
 /** Bloque para consultar desarrollo de sitios web y aplicaciones a medida. */
-export function CustomWorkCta({ id = "servicios", showContact = true }: CustomWorkCtaProps) {
+export function CustomWorkCta({ id = "proyecto", showContact = true }: CustomWorkCtaProps) {
   return (
     <section className="container section" id={id}>
       <h2 className="section-title">Hablemos de tu proyecto</h2>

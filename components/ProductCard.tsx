@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { EscapargBrand } from "./EscapargBrand";
 import { ProductVisual } from "./ProductVisual";
+import { productAvailability } from "../lib/release";
 import type { Product } from "../lib/products";
 import "../styles/escaparg-brand.css";
 
@@ -21,7 +22,7 @@ export function ProductCard({ product }: ProductCardProps) {
           <h3>{product.id === "escaparg" ? <EscapargBrand /> : product.name}</h3>
         </div>
         <span className="product-card__badge is-dev">
-          {product.id === "nido" ? "Play Store · Próximamente" : "En desarrollo"}
+          {productAvailability[product.id]}
         </span>
       </div>
       {product.id !== "careme" && <ProductVisual productId={product.id} compact />}

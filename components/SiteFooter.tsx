@@ -1,3 +1,4 @@
+import { productAvailability } from "../lib/release";
 import Link from "next/link";
 import { site } from "../lib/site";
 import { JondreaLogo } from "./JondreaLogo";
@@ -49,6 +50,7 @@ export function SiteFooter() {
             <p className="site-footer__label">Navegar</p>
             <Link href="/">Inicio</Link>
             <Link href="/sobre-nosotros">Sobre nosotros</Link>
+            <Link href="/#casos">Casos reales</Link>
             <Link href="/productos">Productos</Link>
             <Link href="/contactanos">Contactanos</Link>
             <Link href="/privacidad">Privacidad</Link>
@@ -57,7 +59,7 @@ export function SiteFooter() {
           <div>
             <p className="site-footer__label">Productos</p>
             <Link href="/productos/nido">Nido</Link>
-            <span className="site-footer__muted">CareMe · En desarrollo</span>
+            <span className="site-footer__muted">CareMe · {productAvailability.careme}</span>
             <Link href="/productos/escaparg">EscapARG</Link>
           </div>
         </div>

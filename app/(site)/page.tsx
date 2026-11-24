@@ -2,13 +2,11 @@ import Link from "next/link";
 import { CustomWorkCta } from "../../components/CustomWorkCta";
 import { EscapargCaseStudy } from "../../components/EscapargCaseStudy";
 import { NidoCaseStudy } from "../../components/NidoCaseStudy";
-import { ProductCard } from "../../components/ProductCard";
-import { products } from "../../lib/products";
 
 const services = [
-  { title: "Software a medida", text: "Plataformas, portales y herramientas internas que se integran con los sistemas que tu equipo ya usa." },
-  { title: "Sitios web", text: "Sitios corporativos y comerciales, con contenido fácil de encontrar y una experiencia cuidada en cada pantalla." },
-  { title: "Apps móviles", text: "Aplicaciones para iOS y Android. Diseñamos los flujos y preparamos la app para publicarla." }
+  { title: "Software a medida", text: "Plataformas, portales y herramientas internas. Por ejemplo, un panel para seguir pedidos y consultar el stock del sistema que ya usás." },
+  { title: "Sitios web", text: "Sitios corporativos y comerciales. Por ejemplo, un catálogo que tu equipo pueda actualizar y que funcione bien en el celular." },
+  { title: "Apps móviles", text: "Apps para Android y iOS. Por ejemplo, una app para registrar visitas y consultar su historial desde el teléfono." }
 ];
 
 const process = [
@@ -30,13 +28,23 @@ export default function HomePage() {
         </p>
         <div className="hero-actions">
           <Link href="/contactanos" className="btn btn-primary">Contanos tu proyecto</Link>
-          <a href="#servicios" className="btn btn-ghost">Ver servicios</a>
+          <a href="#casos" className="btn btn-ghost">Ver nuestro trabajo</a>
         </div>
       </section>
 
+      <section id="casos" className="container section factory-section" aria-labelledby="casos-titulo">
+        <h2 id="casos-titulo">Casos reales</h2>
+        <NidoCaseStudy />
+        <EscapargCaseStudy />
+      </section>
+
+      <p className="container factory-catalog-link">
+        <Link className="inline-link" href="/productos">Ver todos nuestros productos <span aria-hidden="true">→</span></Link>
+      </p>
+
       <section id="servicios" className="container section factory-section" aria-labelledby="servicios-title">
         <h2 id="servicios-title">Qué desarrollamos</h2>
-        <div className="factory-services">
+        <div className="factory-services factory-services--offers">
           {services.map((service) => (
             <article className="feature-card" key={service.title}>
               <h3>{service.title}</h3>
@@ -56,19 +64,6 @@ export default function HomePage() {
             </li>
           ))}
         </ol>
-      </section>
-
-      <section id="casos" className="container section factory-section" aria-labelledby="casos-titulo">
-        <h2 id="casos-titulo">Casos reales</h2>
-        <NidoCaseStudy />
-        <EscapargCaseStudy />
-      </section>
-
-      <section className="container section factory-section" aria-labelledby="catalogo-title">
-        <h2 id="catalogo-title">Productos propios</h2>
-        <div className="product-grid">
-          {products.map((product) => <ProductCard key={product.id} product={product} />)}
-        </div>
       </section>
 
       <CustomWorkCta id="proyecto" showContact={false} />

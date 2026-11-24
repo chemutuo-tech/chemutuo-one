@@ -1,3 +1,4 @@
+import { productAvailability, publicRelease } from "../lib/release";
 import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
@@ -33,7 +34,7 @@ export function ProductDetailPage({ product }: ProductDetailPageProps) {
             <a href="#dos-espacios" className="btn btn-primary">Conocé Nido <span aria-hidden="true">↗</span></a>
             <a href="#pantallas" className="btn btn-ghost">Ver la app</a>
           </div>
-          <p className="nido-availability"><span aria-hidden="true" />Nido 1.0.0 · Próximamente en Google Play</p>
+          <p className="nido-availability"><span aria-hidden="true" />Nido {publicRelease.versionName} · {productAvailability.nido}</p>
         </div>
         <figure className="nido-hero-art">
           <Image src="/productos/nido/hogar-conceptual.webp"
@@ -118,7 +119,7 @@ export function ProductDetailPage({ product }: ProductDetailPageProps) {
       <section id="descargar" className="container product-block nido-section" aria-labelledby="nido-status-title">
         <div className="nido-status">
           <div><h2 id="nido-status-title">Nido 1.0.0 para Android</h2></div>
-          <div><strong>Próximamente en Google Play</strong><p>El enlace de instalación aparecerá acá cuando termine el proceso de publicación.</p></div>
+          <div><strong>{productAvailability.nido}</strong><p>El enlace de instalación aparecerá acá cuando termine el proceso de publicación. {publicRelease.ios}.</p></div>
         </div>
       </section>
 

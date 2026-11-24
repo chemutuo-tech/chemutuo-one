@@ -1,83 +1,40 @@
 import type { Metadata } from "next";
+import { CopyEmail } from "../../../components/CopyEmail";
 import { customWorkMailto, site } from "../../../lib/site";
 
 export const metadata: Metadata = {
   title: "Contactanos"
 };
 
-/** Página de contacto. */
+/** Distingue los proyectos a medida de las consultas sobre productos propios. */
 export default function ContactPage() {
+  const supportEmail = `mailto:${site.contact.email}?subject=${encodeURIComponent("Consulta sobre un producto de JondreA")}`;
+
   return (
     <>
       <section className="container page-hero page-hero--contact">
         <h1>Contactanos</h1>
-        <p className="lead">
-          Si tenés un proyecto, contanos qué necesitás y en qué etapa estás. Para consultas sobre nuestros productos, escribinos al mismo correo.
-        </p>
-
-        <div className="hero-actions">
-          <a className="btn btn-primary" href={customWorkMailto()}>Escribir sobre un proyecto</a>
-        </div>
-        <div className="contact-quick">
-          <a
-            className="contact-quick__item"
-            href={`mailto:${site.contact.email}`}
-            aria-label={`Email ${site.contact.email}`}
-          >
-            <span className="contact-quick__icon" aria-hidden="true">
-              <svg width="28" height="22" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 2.2C1 1.537 1.537 1 2.2 1h15.6c.663 0 1.2.537 1.2 1.2v11.6c0 .663-.537 1.2-1.2 1.2H2.2A1.2 1.2 0 011 13.8V2.2z" stroke="#22b6ab" strokeWidth="1.4"/>
-                <path d="M2 3.2l8 6 8-6" stroke="#22b6ab" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </span>
-            <span className="contact-quick__meta">
-              <strong className="contact-primary">{site.contact.email}</strong>
-              <span className="contact-sub">Proyectos, productos y soporte.</span>
-            </span>
-          </a>
-
-          <a
-            className="contact-quick__item"
-            href={site.contact.instagram}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`Instagram ${site.contact.instagramHandle}`}
-          >
-            <span className="contact-quick__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="3" y="3" width="18" height="18" rx="4" stroke="#22b6ab" strokeWidth="1.4"/>
-                <circle cx="12" cy="12" r="3.6" stroke="#22b6ab" strokeWidth="1.4"/>
-                <circle cx="17.5" cy="6.5" r="0.7" fill="#22b6ab"/>
-              </svg>
-            </span>
-            <span className="contact-quick__meta">
-              <strong className="contact-primary">{site.contact.instagramHandle}</strong>
-              <span className="contact-sub">Novedades de JondreA.</span>
-            </span>
-          </a>
-
-          <a
-            className="contact-quick__item"
-            href={site.contact.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn JondreA"
-          >
-            <span className="contact-quick__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="2" width="20" height="20" rx="3" fill="none" stroke="#22b6ab" strokeWidth="1.4"/>
-                <path d="M8.5 10.5H6.5v7h2V10.5zM7.5 8.9a1.15 1.15 0 110-2.3 1.15 1.15 0 010 2.3zM11 10.5h1.9v1h.03c.27-.5.95-1.02 1.96-1.02 2.10 0 2.5 1.38 2.5 3.18V17.5h-2v-3.05c0-.73-.01-1.67-1.02-1.67-1.02 0-1.17.79-1.17 1.61V17.5h-2v-7z" fill="#22b6ab"/>
-              </svg>
-            </span>
-            <span className="contact-quick__meta">
-              <strong className="contact-primary">LinkedIn</strong>
-              <span className="contact-sub">Perfil institucional.</span>
-            </span>
-          </a>
-        </div>
+        <p className="lead">Escribinos para conversar sobre tu proyecto o consultar por uno de nuestros productos.</p>
       </section>
 
+      <section className="container section factory-section contact-paths" aria-label="Motivo de la consulta">
+        <div className="factory-services factory-services--two">
+          <article className="feature-card">
+            <h2>Proyectos a medida</h2>
+            <p>Contanos qué necesitás resolver, quién va a usarlo y en qué etapa estás.</p>
+            <a className="btn btn-primary" href={customWorkMailto()}>Escribir sobre mi proyecto</a>
+          </article>
+          <article className="feature-card">
+            <h2>Consultas sobre productos</h2>
+            <p>Si tenés una duda sobre Nido, EscapARG o CareMe, indicá de qué producto se trata.</p>
+            <a className="btn btn-ghost" href={supportEmail}>Consultar sobre un producto</a>
+          </article>
+        </div>
+        <div className="contact-address">
+          <a className="inline-link" href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+          <CopyEmail email={site.contact.email} />
+        </div>
+      </section>
     </>
   );
 }
-

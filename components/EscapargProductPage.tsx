@@ -1,3 +1,4 @@
+import { productAvailability } from "../lib/release";
 import Image from "next/image";
 import Link from "next/link";
 import { productMailto } from "../lib/site";
@@ -35,7 +36,7 @@ export function EscapargProductPage() {
         <p className="escaparg-lead">Una pista que sólo vos ves. Un mecanismo que necesita dos. Un misterio que exige confiar en tu equipo.</p>
         <p className="escaparg-hero-detail">Explorá, conectá las pistas y encontrá la salida con tus amigos. Directamente desde sus navegadores.</p>
         <div className="hero-actions"><a className="btn btn-primary" href="#salas">Descubrí las salas <span aria-hidden="true">↗</span></a><a className="btn btn-ghost" href="#dentro-del-juego">Ver el juego</a></div>
-        <p className="escaparg-availability"><span aria-hidden="true" /> Lanzamiento · En desarrollo</p>
+        <p className="escaparg-availability"><span aria-hidden="true" /> Lanzamiento · {productAvailability.escaparg}</p>
       </div>
       <figure className="escaparg-hero-visual">
         <Image src="/productos/escaparg/el-experimento-portada.webp" alt="Arte promocional de EscapARG: cápsula X-17, pantallas y luces de emergencia en el laboratorio." fill priority sizes="(max-width: 900px) 100vw, 55vw" />
@@ -71,7 +72,7 @@ export function EscapargProductPage() {
       <div className="escaparg-goals"><div><p className="section-label">LO QUE QUEREMOS CONSTRUIR</p><h2 id="goals-title" className="section-title">Que escapar sea<br />una historia compartida.</h2></div><ul><li><strong>Cooperación con sentido.</strong><span>Que conversar y coordinar sea parte del desafío, no sólo jugar al lado de alguien.</span></li><li><strong>Misterios que se puedan deducir.</strong><span>Evidencias dentro del escenario y pistas progresivas cuando el equipo las pide.</span></li><li><strong>Un mundo que acompañe.</strong><span>Escenarios, interfaces, música y sonidos al servicio de lo que está pasando.</span></li></ul></div>
     </section>
 
-    <section className="container section escaparg-section" aria-labelledby="status-title"><div className="escaparg-status"><span className="section-label">ESTADO DEL PROYECTO</span><h2 id="status-title">Dos escape rooms para empezar. Mucho más por venir.</h2><p>La primera versión de EscapARG llegará con dos escape rooms: El Experimento y El Contacto. Después del lanzamiento, sumaremos nuevas salas, más misterios y mucho más para descubrir en equipo.</p><p className="escaparg-status-note">Fecha de lanzamiento: En desarrollo.</p></div></section>
+    <section className="container section escaparg-section" aria-labelledby="status-title"><div className="escaparg-status"><span className="section-label">ESTADO DEL PROYECTO</span><h2 id="status-title">Dos escape rooms para empezar. Mucho más por venir.</h2><p>La primera versión de EscapARG llegará con dos escape rooms: El Experimento y El Contacto. Después del lanzamiento, sumaremos nuevas salas, más misterios y mucho más para descubrir en equipo.</p><p className="escaparg-status-note">Fecha de lanzamiento: {productAvailability.escaparg}.</p></div></section>
 
     <section className="container section section--cta escaparg-contact"><div className="cta-band"><p className="section-label">UN PRODUCTO DE JONDREA</p><h2 className="section-title">¿Conversamos sobre EscapARG?</h2><p className="section-lead">Si querés saber más sobre el proyecto o acercarnos una consulta, escribinos.</p><div className="hero-actions hero-actions--center"><a className="btn btn-primary" href={productMailto("EscapARG")}>Contactar a JondreA</a><Link className="btn btn-ghost" href="/productos">Volver al catálogo</Link></div></div></section>
   </article>;
