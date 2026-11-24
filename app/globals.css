@@ -1635,6 +1635,7 @@ h2.about-block__title {
 
 .case-study__copy h4 { margin: 1rem 0 .35rem; font-size: 1rem; }
 .case-study__copy p { margin: 0; font-size: .94rem; line-height: 1.7; }
+.case-study__copy p + p { margin-top: .85rem; }
 .case-study .case-study__label {
   margin-bottom: .5rem;
   color: var(--color-accent);
@@ -1679,6 +1680,24 @@ h2.about-block__title {
   color: var(--color-text-muted);
   font-size: .75rem;
   text-align: center;
+}
+
+.case-study__figure--landscape {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.case-study__figure--landscape figcaption {
+  position: absolute;
+  inset: auto .6rem .6rem;
+  width: fit-content;
+  margin: 0;
+  padding: .3rem .55rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text);
+  text-align: left;
 }
 
 @media (max-width: 700px) {

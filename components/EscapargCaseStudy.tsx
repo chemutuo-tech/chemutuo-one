@@ -6,22 +6,26 @@ export function EscapargCaseStudy() {
   return (
     <article className="case-study" aria-labelledby="caso-escaparg">
       <div className="case-study__copy">
-        <p className="case-study__label">EscapARG · Producto propio en desarrollo</p>
-        <h3 id="caso-escaparg">Diseñar una sala que se resuelva en equipo</h3>
+        <p className="case-study__label">EscapARG · Escape rooms online</p>
+        <h3 id="caso-escaparg">¡No sé qué código va en esta puerta!</h3>
 
-        <h4>El desafío</h4>
         <p>
-          En una sala de escape online, juntar a varias personas en la misma partida es solo
-          el principio. Queríamos que cada integrante tuviera algo concreto para aportar y que
-          ponerse de acuerdo fuera parte del juego.
+          Entrás con tus amigos a un laboratorio o a una nave abandonada. Explorá, resolvé
+          los puzzles y ojo con lo que los acecha. Uno encuentra una pista, vos seguís
+          peleándote con un panel y alguien grita desde otra habitación que encontró el
+          código. Lo probás y… ¡se abre la puerta!
         </p>
 
-        <h4>Qué hizo JondreA</h4>
         <p>
-          Diseñamos El Experimento y El Contacto, y desarrollamos partidas en el navegador para
-          equipos de 2 a 4 personas. Implementamos salas por código de invitación y un servidor
-          que mantiene a todos en la misma partida. En El Contacto, hay mecanismos que requieren
-          que dos jugadores distintos mantengan controles a la vez.
+          Esa era la partida que queríamos armar en JondreA. En <strong>El Contacto</strong>,
+          por ejemplo, hay mecanismos en los que dos jugadores tienen que mantener apretados
+          sus controles al mismo tiempo. Si uno suelta antes, toca coordinar otra vez.
+        </p>
+
+        <p>
+          Las dos primeras salas son <strong>El Experimento</strong> y <strong>El Contacto</strong>.
+          Se juegan de <strong>2 a 4</strong> desde el navegador. Armás la partida, les pasás el
+          código a tus amigos y entran. Próximamente, <strong>más salas, desafíos diarios y semanales</strong>.
         </p>
         <Link className="inline-link" href="/productos/escaparg#dentro-del-juego">
           Ver capturas de EscapARG <span aria-hidden="true">→</span>
@@ -36,7 +40,7 @@ export function EscapargCaseStudy() {
           height={555}
           sizes="(max-width: 700px) 90vw, (max-width: 1152px) 40vw, 450px"
         />
-        <figcaption>El Experimento · Captura de una versión en desarrollo</figcaption>
+        <figcaption>El Experimento · Próximamente</figcaption>
       </figure>
     </article>
   );
