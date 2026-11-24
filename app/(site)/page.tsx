@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CustomWorkCta } from "../../components/CustomWorkCta";
+import { EscapargCaseStudy } from "../../components/EscapargCaseStudy";
 import { NidoCaseStudy } from "../../components/NidoCaseStudy";
 import { ProductCard } from "../../components/ProductCard";
 import { products } from "../../lib/products";
@@ -57,7 +58,11 @@ export default function HomePage() {
         </ol>
       </section>
 
-      <NidoCaseStudy />
+      <section id="casos" className="container section factory-section" aria-labelledby="casos-titulo">
+        <h2 id="casos-titulo">Casos reales</h2>
+        <NidoCaseStudy />
+        <EscapargCaseStudy />
+      </section>
 
       <section className="container section factory-section" aria-labelledby="catalogo-title">
         <h2 id="catalogo-title">Productos propios</h2>

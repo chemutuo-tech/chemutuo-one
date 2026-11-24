@@ -1669,6 +1669,11 @@ h2.about-block__title {
   border-radius: var(--radius-md);
 }
 
+.case-study__figure--landscape img {
+  width: 100%;
+  border-radius: var(--radius-sm);
+}
+
 .case-study__figure figcaption {
   margin-top: .75rem;
   color: var(--color-text-muted);
