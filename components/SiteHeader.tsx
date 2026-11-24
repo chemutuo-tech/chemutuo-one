@@ -8,6 +8,7 @@ import { JondreaLogo } from "./JondreaLogo";
 const NAV = [
   { href: "/", label: "Inicio" },
   { href: "/sobre-nosotros", label: "Sobre nosotros" },
+  { href: "/#casos", label: "Casos reales" },
   { href: "/productos", label: "Productos" },
   { href: "/contactanos", label: "Contactanos" }
 ] as const;

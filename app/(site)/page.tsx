@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CustomWorkCta } from "../../components/CustomWorkCta";
+import { NidoCaseStudy } from "../../components/NidoCaseStudy";
 import { ProductCard } from "../../components/ProductCard";
 import { products } from "../../lib/products";
 
@@ -55,6 +56,8 @@ export default function HomePage() {
           ))}
         </ol>
       </section>
+
+      <NidoCaseStudy />
 
       <section className="container section factory-section" aria-labelledby="catalogo-title">
         <h2 id="catalogo-title">Productos propios</h2>
