@@ -52,7 +52,7 @@ export function SiteFooter() {
       </div>
       <div className="site-footer__legal">
         <p>
-          © {year} {site.copyrightOwner}. Todos los derechos reservados.{" "}
+          © {year} {site.name}. Todos los derechos reservados.{" "}
           <Link href="/privacidad">Privacidad</Link>
         </p>
       </div>

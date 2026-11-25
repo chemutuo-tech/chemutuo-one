@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { site } from "../lib/site";
 
 /** Presenta las decisiones de diseño y desarrollo detrás de la cooperación en EscapARG. */
 export function EscapargCaseStudy() {
@@ -17,7 +18,7 @@ export function EscapargCaseStudy() {
         </p>
 
         <p>
-          Esa era la partida que queríamos armar en Che Mutuo. En <strong>El Contacto</strong>,
+          Esa era la partida que queríamos armar en {site.name}. En <strong>El Contacto</strong>,
           por ejemplo, hay mecanismos en los que dos jugadores tienen que mantener apretados
           sus controles al mismo tiempo. Si uno suelta antes, toca coordinar otra vez.
         </p>

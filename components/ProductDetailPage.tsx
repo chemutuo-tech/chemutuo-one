@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import type { Product } from "../lib/products";
-import { productMailto } from "../lib/site";
+import { productMailto, site } from "../lib/site";
 import { ProductPhoneMockups } from "./ProductPhoneMockups";
 
 type ProductDetailPageProps = { product: Product };
@@ -124,11 +124,11 @@ export function ProductDetailPage({ product }: ProductDetailPageProps) {
       </section>
 
       <section id="soporte" className="container product-block nido-section nido-contact" aria-labelledby="nido-contact-title">
-        <p className="product-label">Un producto de Che Mutuo</p>
+        <p className="product-label">Un producto de {site.name}</p>
         <h2 id="nido-contact-title">¿Conversamos sobre Nido?</h2>
         <p>Si querés saber más, compartir una sugerencia o hacer una consulta, escribinos.</p>
         <div className="nido-actions">
-          <a className="btn btn-primary" href={productMailto(product.name)}>Contactar a Che Mutuo</a>
+          <a className="btn btn-primary" href={productMailto(product.name)}>Contactar a {site.name}</a>
           <Link className="btn btn-ghost" href="/productos/nido/eliminar-cuenta">Solicitar eliminación de cuenta</Link>
           <Link className="btn btn-ghost" href="/productos">Volver al catálogo</Link>
         </div>

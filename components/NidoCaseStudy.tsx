@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { productAvailability } from "../lib/release";
+import { site } from "../lib/site";
 
-/** Cuenta qué diseñó y construyó Che Mutuo para Nido. */
+/** Cuenta qué diseñó y construyó CheMutuo para Nido. */
 export function NidoCaseStudy() {
   return (
     <article className="case-study" aria-labelledby="caso-nido">
@@ -16,7 +17,7 @@ export function NidoCaseStudy() {
           cabeza de alguien, cuesta saber qué falta hacer y quién se ocupa.
         </p>
 
-        <h4>Qué hizo Che Mutuo</h4>
+        <h4>Qué hizo {site.name}</h4>
         <p>
           Diseñamos dos espacios y construimos la app para Android y su API. En Hogar, quienes
           conviven consultan la agenda, comparten listas de compras y asignan responsables a las

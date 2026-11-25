@@ -1,16 +1,15 @@
 import { publicRelease } from "./release";
 
-/** Datos globales del sitio Che Mutuo. */
+/** Datos globales del sitio CheMutuo. */
 export const site = {
-  name: "Che Mutuo",
+  name: "CheMutuo",
   tagline: "Diseño y desarrollo de software.",
   description:
     "Diseñamos y desarrollamos productos digitales, sitios web y aplicaciones móviles para empresas. También creamos Nido, EscapARG y CareMe.",
   contact: {
     email: "chemutuo@gmail.com",
     linkedin: "https://www.linkedin.com/company/chemutuo/"
-  },
-  copyrightOwner: "Che Mutuo"
+  }
 } as const;
 
 /** Origen público del sitio (sitemap, Open Graph y robots). */

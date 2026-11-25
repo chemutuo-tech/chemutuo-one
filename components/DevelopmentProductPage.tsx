@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getProduct } from "../lib/products";
-import { productMailto } from "../lib/site";
+import { productMailto, site } from "../lib/site";
 import { ProductVisual } from "./ProductVisual";
 import "../styles/product-preview.css";
 
@@ -80,7 +80,7 @@ export function DevelopmentProductPage({ productId }: { productId: "careme" | "e
           <h2 className="section-title">Estamos construyendo {product.name}.</h2>
           <p className="section-lead">{careme ? "Todavía no está disponible para descargar. Si querés conversar sobre el proyecto, escribinos." : "Si querés conversar sobre el proyecto, escribinos."}</p>
           <div className="hero-actions hero-actions--center">
-            <a className="btn btn-primary" href={productMailto(product.name)}>Contactar a Che Mutuo</a>
+            <a className="btn btn-primary" href={productMailto(product.name)}>Contactar a {site.name}</a>
             <Link className="btn btn-ghost" href="/productos">Volver al catálogo</Link>
           </div>
         </div>

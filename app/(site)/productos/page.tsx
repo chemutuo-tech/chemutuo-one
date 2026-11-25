@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { CustomWorkCta } from "../../../components/CustomWorkCta";
 import { ProductCard } from "../../../components/ProductCard";
 import { products } from "../../../lib/products";
+import { site } from "../../../lib/site";
 
 export const metadata: Metadata = {
   title: "Productos",
-  description: "Conocé Nido, CareMe y EscapARG: los productos digitales que estamos construyendo en Che Mutuo."
+  description: `Conocé Nido, CareMe y EscapARG: los productos digitales que estamos construyendo en ${site.name}.`
 };
 
 /** Catálogo público con acceso a las fichas de cada producto. */
@@ -14,7 +15,7 @@ export default function ProductsPage() {
     <>
       <section className="container page-hero page-hero--products">
         <h1>Nuestros productos</h1>
-        <p className="lead">Nido, EscapARG y CareMe son productos que diseñamos y desarrollamos en Che Mutuo.</p>
+        <p className="lead">Nido, EscapARG y CareMe son productos que diseñamos y desarrollamos en {site.name}.</p>
       </section>
       <section className="container section catalog-section" aria-label="Catálogo de productos">
         <div className="product-grid">

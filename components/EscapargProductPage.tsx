@@ -1,7 +1,7 @@
 import { productAvailability } from "../lib/release";
 import Image from "next/image";
 import Link from "next/link";
-import { productMailto } from "../lib/site";
+import { productMailto, site } from "../lib/site";
 import { EscapargBrand } from "./EscapargBrand";
 import "../styles/escaparg-brand.css";
 import "../styles/escaparg-product.css";
@@ -74,6 +74,6 @@ export function EscapargProductPage() {
 
     <section className="container section escaparg-section" aria-labelledby="status-title"><div className="escaparg-status"><span className="section-label">ESTADO DEL PROYECTO</span><h2 id="status-title">Dos escape rooms para empezar. Mucho más por venir.</h2><p>EscapARG se lanzará con El Experimento y El Contacto. Después del lanzamiento, sumaremos nuevas salas, más misterios y mucho más para descubrir en equipo.</p><p className="escaparg-status-note">{productAvailability.escaparg}</p></div></section>
 
-    <section className="container section section--cta escaparg-contact"><div className="cta-band"><p className="section-label">UN PRODUCTO DE CHE MUTUO</p><h2 className="section-title">¿Conversamos sobre EscapARG?</h2><p className="section-lead">Si querés saber más sobre el proyecto o acercarnos una consulta, escribinos.</p><div className="hero-actions hero-actions--center"><a className="btn btn-primary" href={productMailto("EscapARG")}>Contactar a Che Mutuo</a><Link className="btn btn-ghost" href="/productos">Volver al catálogo</Link></div></div></section>
+    <section className="container section section--cta escaparg-contact"><div className="cta-band"><p className="section-label">Un producto de {site.name}</p><h2 className="section-title">¿Conversamos sobre EscapARG?</h2><p className="section-lead">Si querés saber más sobre el proyecto o acercarnos una consulta, escribinos.</p><div className="hero-actions hero-actions--center"><a className="btn btn-primary" href={productMailto("EscapARG")}>Contactar a {site.name}</a><Link className="btn btn-ghost" href="/productos">Volver al catálogo</Link></div></div></section>
   </article>;
 }

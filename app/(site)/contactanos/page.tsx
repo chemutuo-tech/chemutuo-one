@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 /** Distingue los proyectos a medida de las consultas sobre productos propios. */
 export default function ContactPage() {
-  const supportEmail = `mailto:${site.contact.email}?subject=${encodeURIComponent("Consulta sobre un producto de Che Mutuo")}`;
+  const supportEmail = `mailto:${site.contact.email}?subject=${encodeURIComponent(`Consulta sobre un producto de ${site.name}`)}`;
 
   return (
     <>
