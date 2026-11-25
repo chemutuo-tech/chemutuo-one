@@ -8,17 +8,17 @@ export const site = {
   description:
     "Diseñamos y desarrollamos productos digitales, sitios web y aplicaciones móviles para empresas. También creamos Nido, EscapARG y CareMe.",
   contact: {
-    email: "jondreatech@gmail.com",
+    email: "chemutuo@gmail.com",
     instagram: "https://instagram.com/jondrea.tech",
     instagramHandle: "@jondrea.tech",
-    linkedin: "https://linkedin.com/company/jondrea"
+    linkedin: "https://www.linkedin.com/company/chemutuo/"
   },
   copyrightOwner: "Che Mutuo"
 } as const;
 
 /** Origen público del sitio (sitemap, Open Graph y robots). */
 export function siteOrigin() {
-  return process.env.NEXT_PUBLIC_SITE_URL ?? "https://jondrea-one.vercel.app";
+  return process.env.NEXT_PUBLIC_SITE_URL ?? "https://chemutuo.vercel.app";
 }
 
 /** Asunto y cuerpo para consultar un trabajo a medida. */
