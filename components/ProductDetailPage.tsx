@@ -124,11 +124,11 @@ export function ProductDetailPage({ product }: ProductDetailPageProps) {
       </section>
 
       <section id="soporte" className="container product-block nido-section nido-contact" aria-labelledby="nido-contact-title">
-        <p className="product-label">Un producto de JondreA</p>
+        <p className="product-label">Un producto de Che Mutuo</p>
         <h2 id="nido-contact-title">¿Conversamos sobre Nido?</h2>
         <p>Si querés saber más, compartir una sugerencia o hacer una consulta, escribinos.</p>
         <div className="nido-actions">
-          <a className="btn btn-primary" href={productMailto(product.name)}>Contactar a JondreA</a>
+          <a className="btn btn-primary" href={productMailto(product.name)}>Contactar a Che Mutuo</a>
           <Link className="btn btn-ghost" href="/productos/nido/eliminar-cuenta">Solicitar eliminación de cuenta</Link>
           <Link className="btn btn-ghost" href="/productos">Volver al catálogo</Link>
         </div>

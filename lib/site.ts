@@ -1,8 +1,8 @@
 import { publicRelease } from "./release";
 
-/** Datos globales del sitio JondreA (editables a mano). */
+/** Datos globales del sitio Che Mutuo. */
 export const site = {
-  name: "JondreA",
+  name: "Che Mutuo",
   legalName: "JondreA Tech",
   tagline: "Diseño y desarrollo de software.",
   description:
@@ -13,7 +13,7 @@ export const site = {
     instagramHandle: "@jondrea.tech",
     linkedin: "https://linkedin.com/company/jondrea"
   },
-  copyrightOwner: "JondreA Tech"
+  copyrightOwner: "Che Mutuo"
 } as const;
 
 /** Origen público del sitio (sitemap, Open Graph y robots). */
@@ -25,7 +25,7 @@ export function siteOrigin() {
 export function customWorkMailto() {
   const subject = encodeURIComponent("Consulta — desarrollo a medida");
   const body = encodeURIComponent(
-    `Hola JondreA,\n\nQuiero consultar por un proyecto de software.\n\nDescripción del proyecto:\n\nSaludos.`
+    `Hola ${site.name},\n\nQuiero consultar por un proyecto de software.\n\nDescripción del proyecto:\n\nSaludos.`
   );
   return `mailto:${site.contact.email}?subject=${subject}&body=${body}`;
 }
@@ -34,7 +34,7 @@ export function customWorkMailto() {
 export function productMailto(productName: string) {
   const subject = encodeURIComponent(`Consulta — ${productName}`);
   const body = encodeURIComponent(
-    `Hola JondreA,\n\nConsulta sobre ${productName}.\n\nNombre:\nDispositivo:\n\nSaludos.`
+    `Hola ${site.name},\n\nConsulta sobre ${productName}.\n\nNombre:\nDispositivo:\n\nSaludos.`
   );
   return `mailto:${site.contact.email}?subject=${subject}&body=${body}`;
 }
@@ -43,7 +43,7 @@ export function productMailto(productName: string) {
 export function productSupportMailto(productName: string) {
   const subject = encodeURIComponent(`Soporte — ${productName}`);
   const body = encodeURIComponent(
-    `Hola JondreA,\n\nEscribo por un error o una sugerencia sobre ${productName}.\n\nDescripción:\nVersión: ${publicRelease.label}\nDispositivo:\n\nSaludos.`
+    `Hola ${site.name},\n\nEscribo por un error o una sugerencia sobre ${productName}.\n\nDescripción:\nVersión: ${publicRelease.label}\nDispositivo:\n\nSaludos.`
   );
   return `mailto:${site.contact.email}?subject=${subject}&body=${body}`;
 }

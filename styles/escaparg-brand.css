@@ -6,3 +6,4 @@
 .product-card--escaparg:hover .project-visual img { transform: scale(1.025); }
 .product-card--escaparg .product-card__brand h3 { font-size: 1.65rem; }
 @media (prefers-reduced-motion: reduce) { .product-card--escaparg .project-visual img { transition: none; transform: none !important; } }
+.product-card--escaparg .escaparg-brand > span { color: #306c71; }

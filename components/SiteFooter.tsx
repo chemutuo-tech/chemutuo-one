@@ -1,7 +1,7 @@
 import { productAvailability } from "../lib/release";
 import Link from "next/link";
 import { site } from "../lib/site";
-import { JondreaLogo } from "./JondreaLogo";
+import { CheMutuoLogo } from "./CheMutuoLogo";
 
 /** Footer corporativo con navegación, productos, servicios y redes. */
 export function SiteFooter() {
@@ -10,7 +10,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="site-footer__inner">
         <div className="site-footer__brand">
-          <JondreaLogo size="sm" />
+          <CheMutuoLogo />
           <p>{site.tagline}</p>
           <div className="site-footer__social">
             <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>

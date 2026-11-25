@@ -125,7 +125,7 @@ input {
 .site-header__link {
   padding: 0.45rem 0.75rem;
   border-radius: var(--radius-sm);
-  color: #e2e8f0;
+  color: var(--color-text-soft);
   font-family: var(--font-display);
   font-size: 0.92rem;
   font-weight: 600;
@@ -135,25 +135,8 @@ input {
 
 .site-header__link:hover,
 .site-header__link.is-active {
-  color: #ffffff;
-  background: transparent;
-}
-
-@media (max-width: 860px) {
-  .site-header__link:hover {
-    color: #22b6a8;
-  }
-}
-
-@media (min-width: 765px) {
-  /* tablet and up: header nav links use accent color on hover */
-  .site-header__link:hover {
-    color: #22b6a8;
-  }
-}
-
-.site-header__link.is-active {
   color: var(--color-accent);
+  background: var(--color-accent-muted);
 }
 
 .page-hero h1 {
@@ -184,7 +167,7 @@ input {
 .site-header__burger span {
   display: block;
   height: 2px;
-  background: #ffffff;
+  background: var(--color-text);
   border-radius: 2px;
 }
 
@@ -227,109 +210,25 @@ input {
   }
 }
 
-/* ——— Logo ——— */
-.jondrea-logo {
-  --logo-teal: #22b6a8;
+.che-mutuo-logo {
   display: inline-flex;
   align-items: center;
+  gap: .5rem;
   color: var(--color-text);
-  line-height: 1;
+  font: 800 1.25rem/1.1 var(--font-display);
+  letter-spacing: -.045em;
+  white-space: nowrap;
 }
 
-.jondrea-logo__mark {
-  display: block;
-  flex-shrink: 0;
-  width: 1.15em;
-  height: 1.15em;
+.che-mutuo-logo img {
+  width: 2.5rem;
+  border-radius: var(--radius-md);
 }
 
-.jondrea-logo__j {
-  fill: currentColor;
+.site-shell .che-mutuo-logo img {
+  mix-blend-mode: multiply;
 }
 
-.jondrea-logo__a {
-  fill: var(--logo-teal);
-}
-
-.jondrea-logo__word {
-  font-family: "Times New Roman", Georgia, serif;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  color: var(--color-text);
-}
-
-.jondrea-logo__accent {
-  color: var(--logo-teal);
-}
-
-.jondrea-logo--horizontal {
-  gap: 0.55rem;
-}
-
-.jondrea-logo--horizontal .jondrea-logo__word {
-  font-size: 1.55rem;
-}
-
-.jondrea-logo--horizontal.jondrea-logo--sm .jondrea-logo__word {
-  font-size: 1.3rem;
-}
-
-.jondrea-logo--horizontal.jondrea-logo--sm .jondrea-logo__mark {
-  width: 1.7rem;
-  height: 1.7rem;
-}
-
-.jondrea-logo--horizontal.jondrea-logo--md .jondrea-logo__mark {
-  width: 2.15rem;
-  height: 2.15rem;
-}
-
-/* Footer-specific: make the small horizontal logo a bit larger in the footer */
-.site-footer .jondrea-logo--horizontal.jondrea-logo--sm .jondrea-logo__word {
-  font-size: 1.45rem;
-}
-.site-footer .jondrea-logo--horizontal.jondrea-logo--sm .jondrea-logo__mark {
-  width: 1.9rem;
-  height: 1.9rem;
-}
-
-/* larger horizontal logo (used in hero with size="lg") */
-.jondrea-logo--horizontal.jondrea-logo--lg .jondrea-logo__word {
-  font-size: 2.1rem;
-}
-
-.jondrea-logo--horizontal.jondrea-logo--lg .jondrea-logo__mark {
-  width: 2.6rem;
-  height: 2.6rem;
-}
-
-.jondrea-logo--stacked {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.65rem;
-}
-
-.jondrea-logo--stacked .jondrea-logo__mark {
-  width: 4.25rem;
-  height: 4.25rem;
-}
-
-.jondrea-logo--stacked .jondrea-logo__word {
-  font-size: clamp(2.35rem, 5vw, 3.2rem);
-  font-weight: 800;
-  letter-spacing: -0.045em;
-}
-
-.jondrea-logo--mark .jondrea-logo__mark {
-  width: 2rem;
-  height: 2rem;
-}
-
-.hero-brand {
-  margin-bottom: 1.5rem;
-}
-
-/* ——— Footer ——— */
 .site-footer {
   margin-top: 3.5rem;
   border-top: 1px solid var(--color-border);
@@ -349,7 +248,7 @@ input {
 
 .site-footer__brand p {
   margin: 0;
-  padding-top: 0;
+  padding-top: .35rem;
   max-width: 28rem;
   color: var(--color-text-muted);
   font-family: var(--font-display);
@@ -450,7 +349,7 @@ input {
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #22b6a8;
+  color: var(--color-accent);
 }
 
 .site-footer__legal {
@@ -530,7 +429,7 @@ input {
   height: min(460px, 72vw);
   top: -8%;
   left: -12%;
-  background: rgba(34, 182, 168, 0.2);
+  background: var(--color-accent-muted);
 }
 
 .hero-orb--b {
@@ -578,7 +477,7 @@ input {
   font-weight: 800;
   line-height: 1.07;
   letter-spacing: -0.04em;
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .page-hero--home h1 {
@@ -588,14 +487,14 @@ input {
 
 .hero-break {
   display: block;
-  color: #22b6a8;
+  color: var(--color-accent);
   font-family: var(--font-display);
   font-weight: 700;
 }
 
 /* Accent for Apps label on products page */
 .text-accent-apps {
-  color: #22b6ab;
+  color: var(--color-accent);
   font-family: var(--font-display);
   font-weight: 800;
 }
@@ -668,7 +567,7 @@ input {
 
 .section-label {
   margin: 0 auto 1rem;
-  color: #22b6a8;
+  color: var(--color-accent);
   font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 500;
@@ -678,7 +577,7 @@ input {
   align-items: center;
   justify-content: center;
   padding: 0.42rem 0.75rem;
-  border: 1px solid #22b6a8;
+  border: 1px solid var(--color-accent);
   border-radius: 999px;
 }
 
@@ -806,8 +705,8 @@ input {
   width: 1.35rem;
   height: 1.35rem;
   border-radius: 999px;
-  background: rgba(34, 182, 168, 0.12);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 10.5L8.3 13.8L15 7.1' stroke='%2322b6a8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background: var(--color-accent-muted);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 10.5L8.3 13.8L15 7.1' stroke='%2374329a' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 14px 14px;
@@ -837,7 +736,7 @@ input {
   display: block;
   width: fit-content;
   margin-inline: auto;
-  color: #22b6a8;
+  color: var(--color-accent);
 }
 
 .section--cta {
@@ -881,14 +780,14 @@ input {
 }
 
 .btn-primary {
-  background: var(--logo-teal);
-  color: #ffffff;
+  background: var(--color-button);
+  color: #fff;
   border: none;
-  box-shadow: 0 6px 20px rgba(15, 122, 114, 0.22);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--color-button) 20%, transparent);
 }
 
 .btn-primary:hover {
-  background: #116d65;
+  background: var(--color-button-hover);
   filter: none;
 }
 
@@ -995,7 +894,7 @@ input {
 
 .about-block p {
   margin: 0;
-  color: #CBD5E1;
+  color: var(--color-text-muted);
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 400;
@@ -1109,7 +1008,7 @@ input {
   padding: 1.35rem 1.25rem 1.2rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  background: var(--color-surface);
   min-height: 250px;
   transition: border-color var(--duration) var(--ease-out), transform var(--duration) var(--ease-out),
     box-shadow var(--duration) var(--ease-out);
@@ -1119,7 +1018,7 @@ input {
 .product-card--link:hover {
   border-color: var(--color-border);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(34, 182, 168, 0.12), var(--shadow-soft);
+  box-shadow: var(--shadow-soft);
 }
 
 .product-card--nido:hover {
@@ -1207,9 +1106,9 @@ input {
 }
 
 .product-card__cta:hover {
-  background-color: rgba(34, 182, 171, 0.08);
-  border-color: rgba(34, 182, 171, 0.35);
-  color: #22b6ab;
+  background-color: var(--color-accent-muted);
+  border-color: var(--color-border-strong);
+  color: var(--color-accent);
 }
 
 .product-card__cta.is-disabled {
@@ -1247,8 +1146,8 @@ input {
   max-width: 360px;
   padding: 0.9rem 1rem;
   border-radius: 12px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.03);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   text-decoration: none;
   color: inherit;
   transition: box-shadow var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
@@ -1256,7 +1155,7 @@ input {
 
 .contact-quick__item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(34,182,168,0.08);
+  box-shadow: var(--shadow-soft);
 }
 
 .contact-quick__icon {
@@ -1267,8 +1166,8 @@ input {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(34,182,168,0.06);
-  color: #22b6ab;
+  background: var(--color-accent-muted);
+  color: var(--color-accent);
 }
 
 .contact-quick__meta {
@@ -1281,7 +1180,7 @@ input {
 .contact-primary {
   font-family: var(--font-body);
   font-weight: 700;
-  color: #22b6ab;
+  color: var(--color-accent);
 }
 
 .contact-sub {
@@ -1300,7 +1199,7 @@ input {
 }
 
 .contact-ask .text-accent-apps {
-  color: #22b6ab;
+  color: var(--color-accent);
 }
 
 @media (max-width: 900px) {
@@ -1338,7 +1237,7 @@ input {
 
 h2.about-block__title {
   margin: 0 0 1rem;
-  color: #22b6a8;
+  color: var(--color-accent);
   font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 500;
@@ -1348,7 +1247,7 @@ h2.about-block__title {
   align-items: center;
   justify-content: center;
   padding: 0.42rem 0.75rem;
-  border: 1px solid #22b6a8;
+  border: 1px solid var(--color-accent);
   border-radius: 999px;
   white-space: nowrap;
   width: max-content;
@@ -1461,20 +1360,6 @@ h2.about-block__title {
 
 /* Estilos del panel interno: app/admin/admin.css */
 
-/* Header: make the Contactanos CTA use the visual styles of the "Consultar disponibilidad" hover state as its base */
-.site-header__cta {
-  /* base: ghost-hover styles */
-  background: var(--color-accent-muted) !important;
-  color: #ffffff;
-  border: 1px solid var(--color-accent) !important;
-  box-shadow: none !important;
-}
-
-/* keep a subtle hover effect (slightly stronger) */
-.site-header__cta:hover {
-  background: #116d65 !important;
-}
-
 /* Jerarquía y ritmo de la presentación corporativa. */
 .page-hero--home .section-label {
   margin: 0 0 1.5rem;
@@ -1525,31 +1410,77 @@ h2.about-block__title {
 .site-main { scroll-margin-top: var(--header-h); }
 
 .page-hero.factory-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4.5rem);
   min-height: 0;
-  padding-block: clamp(4rem, 10vw, 8rem) clamp(3rem, 7vw, 5.5rem);
+  padding-block: clamp(3rem, 7vw, 6.25rem) clamp(2.75rem, 6vw, 5rem);
   text-align: left;
   border-bottom: 1px solid var(--color-border);
 }
 
 .factory-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
   margin: 0 0 1.15rem;
   color: var(--color-accent);
-  font: 600 .9rem var(--font-display);
+  font: 650 .875rem var(--font-display);
+}
+
+.factory-eyebrow::before {
+  content: "";
+  width: 1.6rem;
+  height: .22rem;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--brand-coral), var(--brand-pink), var(--brand-violet));
 }
 
 .page-hero.factory-hero h1 {
+  color: var(--color-text);
   text-align: left;
   max-width: 15ch;
   margin-inline: 0;
   text-wrap: balance;
+  letter-spacing: -.065em;
+  font-size: clamp(2.55rem, 5.3vw, 4.85rem);
 }
 
 .factory-hero .lead {
+  max-width: 33rem;
   margin-inline: 0;
   text-align: left;
 }
 
 .factory-hero .hero-actions { justify-content: flex-start; }
+
+.factory-hero__visual {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1.13;
+  overflow: hidden;
+  background: var(--gradient-hero);
+  border: 1px solid var(--color-border);
+  border-radius: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: var(--shadow-soft);
+  isolation: isolate;
+}
+
+.factory-hero__visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 760px) {
+  .page-hero.factory-hero { grid-template-columns: minmax(0, 1fr); }
+  .factory-hero__visual { width: min(100%, 30rem); aspect-ratio: 1.4; }
+}
+
 .factory-section { padding-block: clamp(2.5rem, 6vw, 4rem); }
 .factory-section > h2 { font-size: clamp(1.65rem, 3vw, 2.35rem); }
 .factory-services {
@@ -1730,4 +1661,8 @@ h2.about-block__title {
 @media (max-width: 700px) {
   .case-study { gap: 1rem; }
   .case-study__figure figcaption { line-height: 1.5; }
+}
+
+@media (max-width: 700px) {
+  .factory-hero .hero-actions .btn { width: auto; min-width: 0; }
 }

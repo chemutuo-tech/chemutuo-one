@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { JondreaLogo } from "./JondreaLogo";
+import { CheMutuoLogo } from "./CheMutuoLogo";
 
 const NAV = [
   { href: "/", label: "Inicio" },
@@ -23,7 +23,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="site-header__inner">
         <Link href="/" className="site-header__brand" onClick={() => setOpen(false)}>
-          <JondreaLogo />
+          <CheMutuoLogo />
         </Link>
 
         <button

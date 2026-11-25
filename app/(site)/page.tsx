@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { CustomWorkCta } from "../../components/CustomWorkCta";
 import { EscapargCaseStudy } from "../../components/EscapargCaseStudy";
@@ -15,20 +16,25 @@ const process = [
   { title: "Preparamos el lanzamiento", text: "Probamos el producto, dejamos el entorno listo y acordamos cómo seguir después de publicar." }
 ];
 
-/** Presenta los servicios de JondreA, su forma de trabajo y el catálogo propio. */
+/** Presenta los servicios de Che Mutuo, su forma de trabajo y el catálogo propio. */
 export default function HomePage() {
   return (
     <>
       <section className="container page-hero page-hero--home factory-hero">
-        <p className="factory-eyebrow">Diseño e ingeniería de software</p>
-        <h1>Software a medida para tu empresa</h1>
-        <p className="lead">
-          Diseñamos y desarrollamos productos digitales, sitios web y apps móviles.
-          Trabajamos desde la primera versión y dejamos una base que tu equipo pueda ampliar.
-        </p>
-        <div className="hero-actions">
-          <Link href="/contactanos" className="btn btn-primary">Contanos tu proyecto</Link>
-          <a href="#casos" className="btn btn-ghost">Ver nuestro trabajo</a>
+        <div className="factory-hero__copy">
+          <p className="factory-eyebrow">Diseño e ingeniería de software</p>
+          <h1>Software a medida para tu empresa</h1>
+          <p className="lead">
+            Diseñamos y desarrollamos productos digitales, sitios web y apps móviles.
+            Trabajamos desde la primera versión y dejamos una base que tu equipo pueda ampliar.
+          </p>
+          <div className="hero-actions">
+            <Link href="/contactanos" className="btn btn-primary">Contanos tu proyecto</Link>
+            <a href="#casos" className="btn btn-ghost">Ver nuestro trabajo</a>
+          </div>
+        </div>
+        <div className="factory-hero__visual">
+          <Image src="/che-mutuo/logo.jpg" alt="Che Mutuo" width={1254} height={1254} sizes="(max-width: 760px) 85vw, 460px" priority />
         </div>
       </section>
 

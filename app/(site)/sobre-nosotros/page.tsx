@@ -4,7 +4,7 @@ import { CustomWorkCta } from "../../../components/CustomWorkCta";
 
 export const metadata: Metadata = {
   title: "Sobre nosotros",
-  description: "Somos JondreA Tech, un estudio de diseño y desarrollo de software con productos propios."
+  description: "Somos Che Mutuo, un estudio de diseño y desarrollo de software con productos propios."
 };
 
 /** Presenta al equipo y su forma de encarar proyectos. */
@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <>
       <section className="container page-hero page-hero--about">
-        <h1>Sobre JondreA</h1>
+        <h1>Sobre Che Mutuo</h1>
         <p className="lead">
           Somos un estudio familiar de software. El mismo equipo trabaja en las decisiones
           de producto, el diseño y el desarrollo.
@@ -28,7 +28,7 @@ export default function AboutPage() {
           </article>
           <article className="feature-card">
             <h3>Productos propios</h3>
-            <p>Diseñamos y desarrollamos Nido, EscapARG y CareMe en JondreA. En el catálogo podés ver cada proyecto y su estado.</p>
+            <p>Diseñamos y desarrollamos Nido, EscapARG y CareMe en Che Mutuo. En el catálogo podés ver cada proyecto y su estado.</p>
             <Link className="inline-link" href="/productos">Ver productos</Link>
           </article>
         </div>

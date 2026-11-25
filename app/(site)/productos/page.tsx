@@ -5,7 +5,7 @@ import { products } from "../../../lib/products";
 
 export const metadata: Metadata = {
   title: "Productos",
-  description: "Conocé Nido, CareMe y EscapARG: los productos digitales que estamos construyendo en JondreA."
+  description: "Conocé Nido, CareMe y EscapARG: los productos digitales que estamos construyendo en Che Mutuo."
 };
 
 /** Catálogo público con acceso a las fichas de cada producto. */
@@ -14,7 +14,7 @@ export default function ProductsPage() {
     <>
       <section className="container page-hero page-hero--products">
         <h1>Nuestros productos</h1>
-        <p className="lead">Nido, EscapARG y CareMe son productos que diseñamos y desarrollamos en JondreA.</p>
+        <p className="lead">Nido, EscapARG y CareMe son productos que diseñamos y desarrollamos en Che Mutuo.</p>
       </section>
       <section className="container section catalog-section" aria-label="Catálogo de productos">
         <div className="product-grid">

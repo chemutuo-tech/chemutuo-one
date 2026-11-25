@@ -1,14 +1,60 @@
-/**
- * Design tokens — JondreA Tech (marca corporativa).
- * Paleta clara profesional: slate + teal (alineada al logo).
- * Nido usa `.theme-nido` (identidad propia).
- */
+/** Identidad corporativa de Che Mutuo. */
 :root {
-  color-scheme: dark;
-
+  color-scheme: light;
   --font-display: "Inter Variable", system-ui, sans-serif;
+  --font-body: "Inter Variable", system-ui, sans-serif;
+
+  --brand-violet: #9955c2;
+  --brand-coral: #f18b66;
+  --brand-pink: #dc5488;
+  --color-bg: #fcf9fb;
+  --color-bg-elevated: #f7eff7;
+  --color-surface: #ffffff;
+  --color-surface-2: #f2e6f3;
+  --color-border: #e5d8e5;
+  --color-border-strong: #c4adc8;
+  --color-text: #291d2a;
+  --color-text-muted: #5d4c60;
+  --color-text-soft: #473748;
+  --color-accent: #74329a;
+  --color-accent-hover: #5c247d;
+  --color-accent-2: #74329a;
+  --color-accent-muted: #f4e8f8;
+  --color-button: var(--color-accent);
+  --color-button-hover: var(--color-accent-hover);
+  --color-warm: #8f3857;
+  --color-danger: #a43631;
+  --color-success: #21674c;
+  --gradient-hero: linear-gradient(145deg, #fff2ed, #f4e6f8 55%, #efdef8);
+  --gradient-accent: linear-gradient(135deg, #6b2c91, #813ba5);
+  --gradient-card: linear-gradient(160deg, #fff, #faf3fa);
+  --gradient-glow: radial-gradient(circle, #ead4f3, transparent 70%);
+  --shadow-soft: 0 10px 36px rgba(61, 29, 71, 0.09);
+  --shadow-glow: 0 0 0 1px #dbbde6, 0 12px 30px rgba(76, 35, 90, 0.13);
+  --header-bg: rgba(252, 249, 251, 0.94);
+  --footer-bg: #f4eaf4;
+
+  /* Layout */
+  --container: 1120px;
+  --header-h: 78px;
+  --radius-sm: 5px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 180ms;
+  --duration: 320ms;
+}
+
+/** Superficies oscuras de EscapARG y del panel interno. */
+.escaparg-product,
+.admin-root {
+  color-scheme: dark;
   --font-body: "Poppins", system-ui, sans-serif;
-  --logo-teal: #0f7a72;
+  --color-button: #0f7a72;
+  --color-button-hover: #116d65;
 
   /* Palette — slate + teal */
   --color-bg: #142031;
@@ -35,31 +81,17 @@
   --gradient-accent: linear-gradient(135deg, #0f7a72 0%, #1a9b8e 100%);
   --gradient-card: linear-gradient(160deg, #1e2e42 0%, #192638 100%);
   --gradient-glow: radial-gradient(circle, rgba(15, 122, 114, 0.18), transparent 70%);
-
-  /* Layout */
-  --container: 1120px;
-  --header-h: 78px;
-  --radius-sm: 5px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-pill: 999px;
-
-  /* Motion */
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --duration-fast: 180ms;
-  --duration: 320ms;
-
-  /* Shadows */
   --shadow-soft: 0 8px 28px rgba(15, 23, 42, 0.28);
   --shadow-glow: 0 0 0 1px rgba(15, 122, 114, 0.26), 0 10px 28px rgba(15, 23, 42, 0.26);
-  --header-bg: rgba(15, 23, 42, 0.88);
-  --footer-bg: #111827;
+  color: var(--color-text);
+  background: var(--color-bg);
 }
 
 /**
  * Tokens del producto Nido (solo página /productos/nido).
  */
 .theme-nido {
+  --font-body: "Poppins", system-ui, sans-serif;
   --nido-bg: #f7f3ee;
   --nido-bg-soft: #efe8df;
   --nido-surface: #ffffff;

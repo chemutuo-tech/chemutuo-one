@@ -17,7 +17,7 @@ export function EscapargCaseStudy() {
         </p>
 
         <p>
-          Esa era la partida que queríamos armar en JondreA. En <strong>El Contacto</strong>,
+          Esa era la partida que queríamos armar en Che Mutuo. En <strong>El Contacto</strong>,
           por ejemplo, hay mecanismos en los que dos jugadores tienen que mantener apretados
           sus controles al mismo tiempo. Si uno suelta antes, toca coordinar otra vez.
         </p>

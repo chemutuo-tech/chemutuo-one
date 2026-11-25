@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { JondreaLogo } from "../../../components/JondreaLogo";
+import { CheMutuoLogo } from "../../../components/CheMutuoLogo";
 import { firstParam } from "../../../lib/admin";
 
 export const metadata: Metadata = {
   title: "Ingreso"
 };
 
-/** Login del panel interno de JondreA. */
+/** Login del panel interno. */
 export default async function AdminLoginPage({
   searchParams
 }: {
@@ -24,7 +24,7 @@ export default async function AdminLoginPage({
         <span className="admin-orb admin-orb--b" />
       </div>
       <div className="admin-login__card">
-        <JondreaLogo size="sm" />
+        <CheMutuoLogo />
         <p className="admin-kicker">Panel interno</p>
         <h1>Ingresar al panel</h1>
         <p className="admin-login__lead">

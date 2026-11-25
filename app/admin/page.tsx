@@ -6,7 +6,7 @@ import { AdminNidoWake } from "../../components/admin/AdminNidoWake";
 import { AdminNotice } from "../../components/admin/AdminNotice";
 import { AdminProductCard } from "../../components/admin/AdminProductCard";
 import { AdminSection } from "../../components/admin/AdminSection";
-import { JondreaLogo } from "../../components/JondreaLogo";
+import { CheMutuoLogo } from "../../components/CheMutuoLogo";
 import {
   apkPublishedLabel,
   fetchApiHealth,
@@ -76,7 +76,7 @@ export default async function AdminPage({
         <div className="admin-header__inner">
           <div className="admin-header__brand">
             <Link href="/admin" className="admin-header__home">
-              <JondreaLogo size="sm" />
+              <CheMutuoLogo />
             </Link>
             <span className="admin-header__badge">Panel</span>
           </div>
