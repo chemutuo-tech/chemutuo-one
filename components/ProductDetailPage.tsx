@@ -1,4 +1,4 @@
-import { productAvailability, publicRelease } from "../lib/release";
+import { productAvailability } from "../lib/release";
 import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
@@ -34,7 +34,7 @@ export function ProductDetailPage({ product }: ProductDetailPageProps) {
             <a href="#dos-espacios" className="btn btn-primary">Conocé Nido <span aria-hidden="true">↗</span></a>
             <a href="#pantallas" className="btn btn-ghost">Ver la app</a>
           </div>
-          <p className="nido-availability"><span aria-hidden="true" />Nido {publicRelease.versionName} · {productAvailability.nido}</p>
+          <p className="nido-availability"><span aria-hidden="true" />{productAvailability.nido}</p>
         </div>
         <figure className="nido-hero-art">
           <Image src="/productos/nido/hogar-conceptual.webp"
@@ -48,7 +48,7 @@ export function ProductDetailPage({ product }: ProductDetailPageProps) {
       <div className="container nido-facts" aria-label="Los espacios de Nido">
         <p><strong>Hogar</strong><span>Para coordinar lo que comparten.</span></p>
         <p><strong>Yo</strong><span>Para lo que querés cuidar de vos.</span></p>
-        <p><strong>Android primero</strong><span>Preparando el lanzamiento en Play Store.</span></p>
+        <p><strong>Android e iOS</strong><span>Próximamente</span></p>
       </div>
 
       <section id="dos-espacios" className="container product-block nido-section" aria-labelledby="nido-spaces-title">
@@ -118,8 +118,8 @@ export function ProductDetailPage({ product }: ProductDetailPageProps) {
 
       <section id="descargar" className="container product-block nido-section" aria-labelledby="nido-status-title">
         <div className="nido-status">
-          <div><h2 id="nido-status-title">Nido 1.0.0 para Android</h2></div>
-          <div><strong>{productAvailability.nido}</strong><p>El enlace de instalación aparecerá acá cuando termine el proceso de publicación. {publicRelease.ios}.</p></div>
+          <div><h2 id="nido-status-title">{productAvailability.nido}</h2></div>
+          <div><p>Los enlaces de instalación aparecerán acá cuando se publique la app.</p></div>
         </div>
       </section>
 

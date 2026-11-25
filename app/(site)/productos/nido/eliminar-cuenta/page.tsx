@@ -4,7 +4,7 @@ import { site } from "../../../../../lib/site";
 
 export const metadata: Metadata = {
   title: "Eliminar cuenta de Nido",
-  description: "Solicitá la eliminación de tu cuenta y datos de Nido, de JondreA Tech, desde la app o por correo."
+  description: `Solicitá la eliminación de tu cuenta y datos de Nido, de ${site.name}, desde la app o por correo.`
 };
 
 /** Ofrece la solicitud externa de eliminación sin exigir instalar o abrir Nido. */
@@ -14,7 +14,7 @@ export default function DeleteNidoAccountPage() {
     <>
       <section className="container page-hero legal-hero">
         <h1>Eliminar tu cuenta de Nido</h1>
-        <p className="lead">Podés solicitar a JondreA Tech que elimine tu cuenta y sus datos aunque ya no tengas instalada la aplicación.</p>
+        <p className="lead">Podés solicitar a {site.name} que elimine tu cuenta y sus datos aunque ya no tengas instalada la aplicación.</p>
       </section>
       <section className="container section legal-content">
         <div className="about-stack">

@@ -16,20 +16,6 @@ export function SiteFooter() {
             <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
             <div className="site-footer__social-icons">
               <a
-                href={site.contact.instagram}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram"
-                title="Instagram"
-                className="site-footer__social-icon"
-              >
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
-                  <circle cx="12" cy="12" r="4.2" />
-                  <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none" />
-                </svg>
-              </a>
-              <a
                 href={site.contact.linkedin}
                 target="_blank"
                 rel="noreferrer"

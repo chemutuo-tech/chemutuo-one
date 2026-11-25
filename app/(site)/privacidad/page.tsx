@@ -4,7 +4,7 @@ import { site } from "../../../lib/site";
 
 export const metadata: Metadata = {
   title: "Privacidad",
-  description: "Datos personales, privacidad del hogar y eliminación de cuenta en Nido, de JondreA Tech."
+  description: `Datos personales, privacidad del hogar y eliminación de cuenta en Nido, de ${site.name}.`
 };
 
 /** Explica el tratamiento de datos del sitio y Nido y permite iniciar solicitudes de privacidad. */
@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <section className="container page-hero legal-hero">
         <h1>Privacidad</h1>
         <p className="lead">
-          Esta página explica qué datos usa Nido, de JondreA Tech, para organizar el hogar,
+          Esta página explica qué datos usa Nido, de {site.name}, para organizar el hogar,
           qué información es privada y cómo ejercer tus derechos sobre tus datos.
         </p>
       </section>

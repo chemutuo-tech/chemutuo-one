@@ -13,14 +13,13 @@ const NIDO_SHOTS = [
 
 /** Presenta una captura real con opción de ampliarla en otra pestaña. */
 function PhoneShot({ src, label, alt }: { src: string; label: string; alt: string }) {
-  const captureSrc = `${src}?v=1.0.0-android`;
   return (
     <figure className="phone-frame phone-frame--nido">
       <div className="phone-frame__bezel">
         <div className="phone-frame__notch" aria-hidden="true" />
         <div className="phone-frame__screen phone-frame__screen--photo">
-          <a href={captureSrc} target="_blank" rel="noopener noreferrer" aria-label={`Ampliar captura de ${label} (abre otra pestaña)`}>
-            <Image src={captureSrc} alt={alt} width={1080} height={2400} sizes="(max-width: 460px) 42vw, 182px" />
+          <a href={src} target="_blank" rel="noopener noreferrer" aria-label={`Ampliar captura de ${label} (abre otra pestaña)`}>
+            <Image src={src} alt={alt} width={1080} height={2400} sizes="(max-width: 460px) 42vw, 182px" />
           </a>
         </div>
       </div>
@@ -36,7 +35,7 @@ export function ProductPhoneMockups() {
       <div className="nido-intro">
         <p className="product-label">La app, por dentro</p>
         <h2 id="nido-screens-title">Así se organiza tu día.</h2>
-        <p>Capturas de Nido 1.0.0 para Android con datos ficticios. Podés ampliar cada imagen para ver el detalle.</p>
+        <p>Capturas de Nido en Android con datos ficticios. Podés ampliar cada imagen para ver el detalle.</p>
       </div>
       <div className="product-phones__row product-phones__row--gallery">
         {NIDO_SHOTS.map((shot) => <PhoneShot key={shot.src} {...shot} />)}

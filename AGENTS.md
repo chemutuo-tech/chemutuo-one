@@ -1,13 +1,13 @@
 /**
- * Project rules for AI agents working in the jondrea-one repo.
+ * Project rules for AI agents working in the chemutuo-one repo.
  * Read this file before making any code change.
  */
 
-# jondrea-one — Agent Rules
+# chemutuo-one — Agent Rules
 
 ## Scope
 
-Sitio corporativo Next.js de Jondrea (landing + `/admin` de Nido).
+Sitio corporativo Next.js de Che Mutuo (landing + `/admin` de Nido).
 La app Nido (API Nest + mobile Expo) vive en el sibling correspondiente.
 
 ## Non-negotiables

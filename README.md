@@ -1,8 +1,8 @@
-# JondreA One
+# Che Mutuo One
 
-Sitio corporativo de **JondreA Tech** (software factory) y panel admin de **Nido**.
+Sitio corporativo de **Che Mutuo** y panel admin de **Nido**.
 
-Un solo producto propio: Nido (hub del hogar + espacio Yo). CareMe se retiró; sus hábitos, objetivos y ánimo viven en Nido.
+El catálogo presenta Nido, EscapARG y CareMe.
 
 ## Stack
 
@@ -13,7 +13,7 @@ Un solo producto propio: Nido (hub del hogar + espacio Yo). CareMe se retiró; s
 ## Arranque
 
 ```bash
-cd C:\JondreA\jondrea-one
+cd chemutuo-one
 cp .env.example .env
 pnpm install
 pnpm dev
@@ -31,9 +31,10 @@ Para métricas de Nido la API tiene que estar arriba y `NIDO_ADMIN_ANALYTICS_KEY
 |------|-------------|
 | `/` | Home |
 | `/sobre-nosotros` | Sobre nosotros |
-| `/contactanos` | Contacto (email / IG / LinkedIn) |
+| `/contactanos` | Contacto por correo y LinkedIn |
 | `/productos` | Portfolio |
-| `/productos/nido` | Ficha de Nido (APK, información de lanzamiento) |
+| `/productos/nido` | Ficha de Nido y disponibilidad |
+| `/productos/escaparg` | Ficha de EscapARG y disponibilidad |
 | `/privacidad` | Nota de privacidad |
 | `/admin` | Métricas de Nido (Hogar + Yo) |
 
@@ -49,10 +50,10 @@ Para métricas de Nido la API tiene que estar arriba y `NIDO_ADMIN_ANALYTICS_KEY
 
 ## Despliegue (Vercel)
 
-Branch: **`develop`**.
+Los cambios de `develop` generan un preview. La publicación requiere promover el despliegue a producción en Vercel.
 
-1. [vercel.com](https://vercel.com) → Import GitHub `JondreA-Tech/jondrea-one`
-2. Framework: Next.js · Branch: `develop`
+1. Abrí el [proyecto en Vercel](https://vercel.com/chemutuo/chemutuo-one), conectado a `chemutuo-tech/chemutuo-one`.
+2. Framework: Next.js.
 3. Env vars:
 
 | Key | Valor |

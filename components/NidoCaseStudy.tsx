@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { productAvailability, publicRelease } from "../lib/release";
+import { productAvailability } from "../lib/release";
 
 /** Cuenta qué diseñó y construyó Che Mutuo para Nido. */
 export function NidoCaseStudy() {
@@ -31,7 +31,7 @@ export function NidoCaseStudy() {
           <Image src="/nido/screens/nido-hogar.png" alt="Hogar de Nido, con la agenda y el acceso a Mi espacio." width={1080} height={2400} sizes="(max-width: 420px) 38vw, 175px" />
           <Image src="/nido/screens/nido-yo.png" alt="Espacio Yo de Nido, con tendencias de ánimo y hábitos personales." width={1080} height={2400} sizes="(max-width: 420px) 38vw, 175px" />
         </div>
-        <figcaption>Capturas de Nido para Android. {productAvailability.nido}. {publicRelease.ios}.</figcaption>
+        <figcaption>Nido · {productAvailability.nido}</figcaption>
       </figure>
     </article>
   );
